@@ -4,7 +4,7 @@
 		</p>
 
 		<% @users.each do |user| %>
-        
+        <% unless Following.exists?(current_user, user) || current_user == user %>
           <figure class="media-left">
 			<p class="image is-64x64">
 				 <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
@@ -14,11 +14,15 @@
             <%= link_to user.name, user_path(user) %>
           </div>
           
-            
+             <%= form_for(current_user.active_followings.build) do |f| %>
+              <%= hidden_field_tag :followed_id, user.id %>
               <div class="right-buttons">
-              <%= button_to "Follow", class: "btn btn-primary" %>
+              <%= f.submit "Follow", class: "btn btn-primary" %>
               </div>
-            <% end %>        
+            <% end %>
+              
+            <% end %> 
+        <%end%>       
       
 		
 	<div class="media-content">

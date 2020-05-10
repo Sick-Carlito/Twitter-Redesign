@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+      <li>
+        Name: <%= user.email %>
+        <span class="profile-link">
+          <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+        </span>
+      </li>
+<% end %>

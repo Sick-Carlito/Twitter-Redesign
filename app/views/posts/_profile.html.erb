@@ -1,0 +1,83 @@
+
+<div class="container">
+	<nav>
+		<!-- <p class="heading">Profile</p> -->
+		
+			<div class="block">
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-64x64">
+						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+					</figure>
+				</div>
+				<div class="media-content">
+					<div class="content">
+						<p>
+							<strong><%= current_user.name %></strong><br />
+							
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="panel-block">
+			<div class="level is-mobile">
+					<div class="tabs">
+						<div class="level-item has-centered-text">
+						<div>
+						<p class="heading ">Posts</p>
+						<p class="title is-6"><%= current_user.posts.count %></p>
+					</div>
+					<div class="level-item has-centered-text">
+					<div>
+						<p class="heading">Following</p>
+						<p class="title is-6">174</p>
+					</div>
+				</div>
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="heading">Followers</p>
+						<p class="title is-6">546</p>
+					</div>
+				</div>
+				
+					
+				</div>
+					</div>
+				
+			</div>
+		</div>
+	<!-- </nav> -->
+
+	<!-- <nav class="panel"> -->
+		
+		<a class="panel-block">
+			<p>
+                   <span class="icon"><i class="fa fa-home" aria-hidden="true"></i><P> HOME </P></span>
+                </p>
+		</a>
+		<a class="panel-block">
+			<p>
+                   <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i><P> CONNECT </P></span>
+                </p>
+		</a>
+		<a class="panel-block">
+			<p>
+                   <span class="icon"><i class="fa fa-user" aria-hidden="true"></i><P > PROFILE </P></span>
+                </p>
+		</a>
+		<a class="panel-block">
+			<p>
+                   <span class="icon"><i class="fa fa-hashtag" aria-hidden="true"></i><P> DISCOVER </P></span>
+                </p>
+		</a>
+		<a class="panel-block">
+			<p>
+                   <span class="icon"><i class="fas fa-chart-pie"  aria-hidden="true"></i><P> STATISTICS </P></span>
+                </p>
+		</a>
+	</nav>
+
+
+		</div>
+		

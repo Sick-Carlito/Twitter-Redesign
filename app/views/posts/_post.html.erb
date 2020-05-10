@@ -1,14 +1,29 @@
-<li class="post">
-  <div>
-    <div class='post-attribution' >
-      <%= link_to post.user.name, user_path(post.user), class: 'post-author' %>
-    </div>
-    <div class='post-liking'>
-      <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
-    </div>
-  </div>
-  <p class="post-content">
-    <%= post.content %>
-  </p>
 
-</li>
+    <div class="media-content">
+        <div class="content">
+             <div class="media-left">
+                <figure class="image is-64x64">
+                  <%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.name) %>
+                </figure>
+             </div>
+                 <strong><%= link_to post.user.name, user_path(post.user), class: 'post-author' %></strong><br />
+                 <small><%= post.created_at.strftime("%Y/%m/%d") %></small><br/> 
+                 <p> <%= post.content %></p>
+        </div>
+        <%if user_signed_in?%>
+        <nav class="level">
+          <div class="level-left is-mobile">
+            
+              <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+          
+            
+              <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+            
+           
+                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+            
+          </div>
+        </nav>
+        <%end%>
+      </div>
+  

@@ -1,24 +1,37 @@
-<div class="new-initial">
-  <h3>
-    Add new Tweet
-  </h3>
-</div>
-<%= form_for(@post) do |form| %>
-  <%= form.label :content %>
-  <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
-  <% if @post.errors.full_messages.any? %>
-    <p class="errors">
-      <%= "Post could not be saved. #{@post.errors.full_messages.join('. ')}" %>
-    </p>
-  <% end %>
-  <%= form.submit 'Save', class: 'btn btn-primary' %>
-<% end %>
 
-<article class="timeline new-initial">
-  <h3>
-    Recent tweets
-  </h3>
-  <ul class="posts">
-    <%= render @timeline_posts %>
-  </ul>
-</article>
+<% if user_signed_in? %>
+     <div class="columns" >
+       <aside class="has-background-danger">
+          <div class="column">
+           <%= render 'profile' %>
+        </div>
+      </aside>
+         <div class="column is-7 is-info">
+           <div class="tabs">
+               <ul>
+                  <li class="is-active"><a>POSTS</a></li>
+                  <li><a>PHOTOS</a></li>
+              <li><a>VIDEOS</a></li>
+              </ul>
+         </div>
+
+         <div  class= "column">
+                <%= render 'feed' %>
+           </div>
+
+           <div  class= "column is-3">
+              <%= render 'who-to-follow' %>
+         </div>
+
+       </div>
+
+       
+  
+           
+     </div>
+
+
+     
+      
+
+ <%end%>

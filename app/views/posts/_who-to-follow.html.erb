@@ -1,0 +1,35 @@
+<nav class="panel">
+		<p class="panel-heading">
+			Who to Follow<span class="icon is-pulled-right"><i class="fa fa-plus" aria-hidden="false"></i></span>
+		</p>
+
+		<% @users.each do |user| %>
+        
+          <figure class="media-left">
+			<p class="image is-64x64">
+				 <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+			</p>
+		</figure>
+          <div class="nav-links-names">
+            <%= link_to user.name, user_path(user) %>
+          </div>
+          
+            
+              <div class="right-buttons">
+              <%= button_to "Follow", class: "btn btn-primary" %>
+              </div>
+            <% end %>        
+      
+		
+	<div class="media-content">
+					<div class="content columns has-text-centered ">
+						<p class="column ">
+							<small >Popular account</small>
+						</p>
+						<p class="column">
+							<small>find friends</small>
+						</p>
+					
+					</div>
+				</div>
+	</nav>

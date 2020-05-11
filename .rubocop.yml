@@ -1,4 +1,5 @@
 AllCops:
+  EnabledByDefault: true
   Exclude:
     - "db/**/*"
     - "bin/*" 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UsersController < ApplicationController
+class UsersController < ApplicationController #:nodoc: all
   before_action :authenticate_user!
 
   def index

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FollowingsController < ApplicationController
+class FollowingsController < ApplicationController #:nodoc: all
   before_action :authenticate_user!
 
   def create

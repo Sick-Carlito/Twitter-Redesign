@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Post < ApplicationRecord
+class Post < ApplicationRecord #:nodoc: all
   validates :content,
             presence: true,
             length: {

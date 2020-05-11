@@ -22,9 +22,9 @@ Metrics/BlockLength:
   ExcludedMethods: ['describe']
 
 Style/Documentation:
-  Enabled: false
+  Enabled: true
 Style/ClassAndModuleChildren:
-  Enabled: false
+  Enabled: true
 
 Layout/HashAlignment:
   EnforcedColonStyle: key

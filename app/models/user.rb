@@ -4,9 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
   validates :name, presence: true, length: { maximum: 20 }
-  
 
   validates_uniqueness_of :name
 
@@ -21,7 +19,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_followings, source: :followed
   has_many :followers, through: :passive_followings, source: :follower
 
-   # Follows a user.
+  # Follows a user.
   def follow(other_user)
     following << other_user
   end
@@ -35,7 +33,4 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
-
-  
 end
-

@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-module RegistrationsHelper
+module RegistrationsHelper #:nodoc: all
 end

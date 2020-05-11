@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-module FollowingsHelper
+module FollowingsHelper #:nodoc: all
 end

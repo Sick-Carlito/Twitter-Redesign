@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+  <%= current_user.post %>
+</p>
+
+<%= link_to 'Edit', edit_post_path %> |
+<%= link_to 'Back', posts_path %>

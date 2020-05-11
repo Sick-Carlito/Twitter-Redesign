@@ -10,6 +10,5 @@ Rails.application.routes.draw do
 	end
   resources :followings,       only: [:create, :destroy]
     
-  resources :posts, only: [:index, :create]
-  
+  resources :posts
 end

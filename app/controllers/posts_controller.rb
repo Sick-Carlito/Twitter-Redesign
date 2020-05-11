@@ -11,10 +11,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      redirect_to posts_path, notice: 'Post was successfully created.'
+      redirect_to(posts_path, notice: 'Post was successfully created.')
     else
       timeline_posts
-      render :index, alert: 'Post was not created.'
+      render(:index, alert: 'Post was not created.')
     end
   end
 
@@ -28,13 +28,13 @@ class PostsController < ApplicationController
     @post.update(post_params)
 
     flash[:notice] = 'Post was successfully updated.'
-    redirect_to posts_path
+    redirect_to(posts_path)
   end
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to(posts_path)
     flash[:notice] = 'Post was successfully destroyed.'
   end
 

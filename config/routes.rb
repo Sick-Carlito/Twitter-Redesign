@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'posts#index'
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :users, only: [:create, :show, :edit, :destroy] do
-	  	member do
-	      get :following, :followers
-	    end
-	end
-  resources :followings,       only: [:create, :destroy]
-    
+  resources :users, only: %i[create show edit destroy] do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :followings, only: %i[create destroy]
+
   resources :posts
 end

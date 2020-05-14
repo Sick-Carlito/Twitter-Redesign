@@ -9,7 +9,8 @@ class User < ApplicationRecord #:nodoc: all
          :rememberable,
          :validatable
 
-  validates :name, presence: true, length: { maximum: 20 }
+  validates :name, uniqueness: true, presence: true, length: { maximum: 20 }
+  validates :name, presence: true
 
   validates_uniqueness_of :name
 

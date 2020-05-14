@@ -1,11 +1,14 @@
-
-    <div class="media-content">
-        <div class="content">
-             <div class="media-left">
+      
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
                 <figure class="image is-64x64">
                   <%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.name) %>
                 </figure>
-             </div>
+          </div>
+             <div class="media-content">
+        <div class="content">
+             
                  <strong><%= link_to post.user.name, user_path(post.user), class: 'post-author' %></strong><br />
                  <small><%= post.created_at.strftime("%Y/%m/%d") %></small><br/> 
                  <p> <%= post.content %></p>
@@ -28,4 +31,9 @@
         
         <%end%>
       </div>
+        </article>
+        
+      </div>
+      
+   
   

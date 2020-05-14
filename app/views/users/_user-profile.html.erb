@@ -1,0 +1,91 @@
+ <div class="panel">
+		<p class="panel-heading">
+			Who to Follow<span class="icon is-pulled-right"><i class="fa fa-plus" aria-hidden="false"></i></span>
+		</p>
+
+		 
+       
+          	<div class="block " >
+			<article  class="media columns is-vcentered has-text-centered " >
+				<div class="media-content column">
+					<div class="content is-pulled-right">
+						<p>
+							<span class="icon"><i class="fa fa-plus" aria-hidden="false"></i></span>
+							
+						</p>
+			 		</div>
+				</div>
+				<div class="media-left column">
+					<figure class="image is-64x64 is-centered pad">
+						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+					</figure>
+					
+				</div>
+				<div class="media-content column">
+					<div class="content is-pulled-left">
+						<p>
+							<span class="icon"><i class="fa fa-list" aria-hidden="false"></i></span>
+							
+						</p>
+			 		</div>
+				</div>
+			</article>
+		</div>
+          <div class="has-text-centered">
+            <%= link_to @user.name, user_path(@user) %>
+             <% if current_user %>
+                <%= render 'posts/follow_form'%>
+             <%end%>
+              <div class="panel-block">
+			<div class="level is-mobile is-centered">
+					<div class="tabs">
+						<div class="level-item has-centered-text">
+						<div>
+						<p class="heading ">Posts</p>
+						<p class="title is-6"><%=@user.posts.count %></p>
+					</div>
+					<div class="level-item has-centered-text">
+					<div>
+						<p class="heading">Following</p>
+						<p class="title is-6"><%= @user.following.count %></p>
+					</div>
+				</div>
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="heading">Followers</p>
+						<p class="title is-6"><%= @user.followers.count%></p>
+					</div>
+				</div>
+				
+					
+				</div>
+					</div>
+				
+			</div>
+		</div>
+
+          </div>
+             
+   
+
+  
+           
+             
+      
+		
+	<div class="media-content">
+					<div class="content columns has-text-centered ">
+						<p class="column ">
+							<small >Popular account</small>
+						</p>
+						<p class="column">
+							<small>find friends</small>
+						</p>
+					
+					</div>
+				</div>
+	</div>
+
+
+
+	

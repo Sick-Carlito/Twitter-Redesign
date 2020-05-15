@@ -10,7 +10,7 @@ class User < ApplicationRecord #:nodoc: all
          :validatable
 
   validates :name, uniqueness: true, presence: true, length: { maximum: 20 }
-  validates :name, presence: true
+  validates :email, presence: true
 
   validates_uniqueness_of :name
 

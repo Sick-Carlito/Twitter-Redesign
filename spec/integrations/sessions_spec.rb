@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Sessions', type: :request do
   describe 'Sessions' do
-    it 'You should go to a page different from /login or /users/new' do
+    it 'You should go to a page different from /login or /users/  new' do
       get root_path
       expect(response).to have_http_status(302)
     end

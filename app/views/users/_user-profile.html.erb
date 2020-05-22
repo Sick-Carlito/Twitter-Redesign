@@ -32,59 +32,43 @@
 			</article>
 		</div>
           <div class="has-text-centered">
-            <%= link_to @user.name, user_path(@user) %>
+            <%= @user.name%>
              <% if current_user %>
                 <%= render 'posts/follow_form'%>
              <%end%>
-              <div class="panel-block">
-			<div class="level is-mobile is-centered">
-					<div class="tabs">
-						<div class="level-item has-centered-text">
-						<div>
-						<p class="heading ">Posts</p>
-						<p class="title is-6"><%=@user.posts.count %></p>
-					</div>
-					<div class="level-item has-centered-text">
+         </div>
+			<div class="tabs">
+						<div class=" has-centered-text ">
+						   <div>
+						     <p class="heading ">Posts</p>
+						     <p class="title is-6"><%=@user.posts.count %></p>
+					       </div>
+				        </div>
+					<div class=" has-centered-text">
 					<div>
 						<p class="heading">Following</p>
-						<p class="title is-6"><%= @user.following.count %></p>
+						<p class="title is-6">
+
+							<%= link_to @user.following.count ,following_user_path(@user) %>
+								
+						</p>
 					</div>
 				</div>
-				<div class="level-item has-centered-text">
+				<div class="has-centered-text">
 					<div>
 						<p class="heading">Followers</p>
-						<p class="title is-6"><%= @user.followers.count%></p>
+						<p class="title is-6"><%= link_to @user.followers.count, followers_user_path(@user) %></p>
 					</div>
 				</div>
 				
 					
 				</div>
-					</div>
+					
 				
-			</div>
+			
 		</div>
-
-          </div>
-             
-   
-
-  
-           
-             
-      
-		
-	<div class="media-content">
-					<div class="content columns has-text-centered ">
-						<p class="column ">
-							<small >Popular account</small>
-						</p>
-						<p class="column">
-							<small>find friends</small>
-						</p>
-					
-					</div>
-				</div>
 	</div>
+ </div>
 
 
 

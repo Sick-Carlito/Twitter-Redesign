@@ -16,4 +16,20 @@ class UsersController < ApplicationController #:nodoc: all
   def edit
     @user = User.find(params[:id])
   end
+
+  def following
+    @title = 'People You are Following!'
+    @user = User.find(params[:id])
+    @users = @user.following 
+    render :partial => 'users/follow-form'
+  end
+
+  def followers
+    @title = 'People Following You!'
+    @user = User.find(params[:id])
+    @users = @user.followers
+    #render 'follow-form'
+    render :partial => 'users/follow-form'
+  end
+  
 end

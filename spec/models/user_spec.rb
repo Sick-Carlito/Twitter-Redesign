@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user1) { User.new(name: 'carl', email:'carl@carl', password:'123456') }
-  let(:user2) { User.new(name: 'carl1', email:'carl1@carl', password:'123456') }
+  let(:user1) { User.new(name: 'carl', email: 'carl@carl', password: '123456') }
+  let(:user2) { User.new(name: 'carl1', email: 'carl1@carl', password: '123456') }
 
   describe 'validates user attributes' do
     it 'validates if the user is valid' do
       expect(user1.valid?).to eql(true)
     end
-   
+
     it 'validates if the name is present' do
       user1.name = ' '
       expect(user1.valid?).not_to eql(true)
@@ -24,7 +26,6 @@ RSpec.describe User, type: :model do
       user1.save
       expect(duplicate_user.valid?).not_to eql(true)
     end
-  
   end
 
   describe 'validates Following associations' do

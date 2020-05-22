@@ -20,16 +20,15 @@ class UsersController < ApplicationController #:nodoc: all
   def following
     @title = 'People You are Following!'
     @user = User.find(params[:id])
-    @users = @user.following 
-    render :partial => 'users/follow-form'
+    @users = @user.following
+    render partial: 'users/follow-form'
   end
 
   def followers
     @title = 'People Following You!'
     @user = User.find(params[:id])
     @users = @user.followers
-    #render 'follow-form'
-    render :partial => 'users/follow-form'
+    # render 'follow-form'
+    render partial: 'users/follow-form'
   end
-  
 end

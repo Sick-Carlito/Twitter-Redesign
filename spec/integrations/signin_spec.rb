@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 feature 'User login the app' do
-  let(:user) { User.create(name: 'carl', email:'carl@carl' , password: '123456') }
+  let(:user) { User.create(name: 'carl', email: 'carl@carl', password: '123456') }
 
   scenario 'user login succesfully' do
     visit new_user_session_path
 
     @user = User.new
 
-    fill_in 'user_email', :with => user.email
-    click_button 'Log in' 
+    fill_in 'user_email', with: user.email
+    click_button 'Log in'
 
     expect(page).to have_text @user.name
   end

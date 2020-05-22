@@ -26,10 +26,9 @@ RSpec.describe(Post, type: :model) do
   end
 
   it 'validates if the post is present' do
-      @post.content = ' '
-      expect(@post.valid?).not_to eql(true)
+    @post.content = ' '
+    expect(@post.valid?).not_to eql(true)
   end
-  
 
   context 'with valid details' do
     it 'should create a post' do

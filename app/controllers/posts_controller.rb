@@ -7,7 +7,16 @@ class PostsController < ApplicationController #:nodoc: all
     @post = Post.new
     timeline_posts
     @users = User.all
+    @user = User.new
+   
   end
+
+  # def show
+  #   @user = User.find(params[:id])
+  #   @posts = @user.posts.ordered_by_most_recent
+  #   @post = @user.posts.build
+  # end
+
 
   def create
     @post = current_user.posts.new(post_params)

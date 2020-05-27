@@ -5,12 +5,16 @@ class UsersController < ApplicationController #:nodoc: all
 
   def index
     @users = User.all
+    timeline_posts
   end
 
   def show
+
+    
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
     @post = @user.posts.build
+    
   end
 
   def edit

@@ -52,20 +52,23 @@
 	<!-- <nav class="panel"> -->
 		
 		<a class="panel-block">
-			<p>
+			    <p>
                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i><P> HOME </P></span>
                 </p>
 		</a>
 		<a class="panel-block">
-			<p>
+			    <p>
                    <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i><P> CONNECT </P></span>
                 </p>
 		</a>
-		<a class="panel-block">
-			<p>
-                   <span class="icon"><i class="fa fa-user" aria-hidden="true"></i><P > PROFILE </P></span>
-                </p>
-		</a>
+		
+			<div class="panel-block">
+                <span><i class="fa fa-user" aria-hidden="true" style="margin-left: 5px;">   <%= link_to 'PROFILE', user_path(current_user), style: 'margin-left: 5px;' %></i></span>
+            </div>
+               
+               
+
+		
 		<a class="panel-block">
 			<p>
                    <span class="icon"><i class="fa fa-hashtag" aria-hidden="true"></i><P> DISCOVER </P></span>

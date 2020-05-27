@@ -8,7 +8,6 @@ class PostsController < ApplicationController #:nodoc: all
     timeline_posts
     @users = User.all
     @user = User.new
-   
   end
 
   # def show
@@ -16,7 +15,6 @@ class PostsController < ApplicationController #:nodoc: all
   #   @posts = @user.posts.ordered_by_most_recent
   #   @post = @user.posts.build
   # end
-
 
   def create
     @post = current_user.posts.new(post_params)

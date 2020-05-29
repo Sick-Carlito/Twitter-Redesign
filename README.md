@@ -1,4 +1,4 @@
-# Private-events
+# Twitter-redesign
 
 This is a simple rails application that implements the use of active records, associations and the CRUD functionalities of rails. The app allows users to Register/Sign-up and post opinions on various topics. Users can also follow one another, edit and delete their posts.
 
@@ -45,6 +45,24 @@ then proceed to sign in
 ```
 Visit localhost:3000/signin
 ```
+![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image2.png)
+
+```
+You will be directed to the home page where you can create posts
+```
+![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image3.png)
+
+```
+You can edit or delete your posts
+```
+![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image5.png)
+
+```
+You can see another users profile information 
+```
+![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image4.png)
+
+
 
 
 ## Build with

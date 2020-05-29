@@ -36,6 +36,8 @@ gem 'sqlite3', '~> 1.4'
 ```
 Visit localhost:3000/signup
 ```
+![Alt image](/images/image1.png)
+
 
 then proceed to sign in
 

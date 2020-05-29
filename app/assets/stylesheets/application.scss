@@ -17,6 +17,12 @@
 @import "bulma";
 
 
+@font-face {
+	font-family: "Sanseriffic";
+	src: url('/assets/Sanseriffic');
+}
+
+
 .navbar-brand .title {
 	color: white;
 }
@@ -34,4 +40,8 @@
 
 #who {
 	margin-top: -65px;
+}
+
+p {
+	font-family: "Sanseriffic", "Arial Black", sans-serif;
 }

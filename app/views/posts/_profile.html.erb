@@ -4,16 +4,16 @@
 		<!-- <p class="heading">Profile</p> -->
 		
 			<div class="block">
-			<article class="media">
+			<article class="media" style="margin: 20px 20px;">
 				<div class="media-left">
-					<figure class="image is-64x64">
+					<figure class="image is-64x64" >
 						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
 					</figure>
 				</div>
 				<div class="media-content">
 					<div class="content">
 						<p>
-							<strong><%= current_user.name %></strong><br />
+							<strong class="has-text-grey-light"><%= current_user.name %></strong><br />
 							
 						</p>
 					</div>
@@ -21,23 +21,23 @@
 			</article>
 		</div>
 		<div class="panel-block">
-			<div class="level is-mobile">
+			<div class="level is-mobile has-text-grey-light">
 					<div class="tabs">
 						<div class="level-item has-centered-text">
 						<div>
 						<p class="heading ">Posts</p>
-						<p class="title is-6"><%= current_user.posts.count %></p>
+						<p class="title is-6 has-text-grey-light"><%= current_user.posts.count %></p>
 					</div>
 					<div class="level-item has-centered-text">
 					<div>
 						<p class="heading">Following</p>
-						<p class="title is-6"> <%= current_user.following.count %></p>
+						<p class="title is-6 has-text-grey-light"> <%= current_user.following.count %></p>
 					</div>
 				</div>
 				<div class="level-item has-centered-text">
 					<div>
 						<p class="heading">Followers</p>
-						<p class="title is-6"><%= current_user.followers.count%></p>
+						<p class="title is-6 has-text-grey-light"><%= current_user.followers.count%></p>
 					</div>
 				</div>
 				
@@ -51,34 +51,16 @@
 
 	<!-- <nav class="panel"> -->
 		
-		<a class="panel-block">
-			    <p>
-                   <span class="icon"><i class="fa fa-home" aria-hidden="true"></i><P> HOME </P></span>
-                </p>
-		</a>
-		<a class="panel-block">
-			    <p>
-                   <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i><P> CONNECT </P></span>
-                </p>
-		</a>
 		
-			<div class="panel-block">
+	
+		
+			<div class="panel-block has-text-grey-light">
                 <span><i class="fa fa-user" aria-hidden="true" style="margin-left: 5px;">   <%= link_to 'PROFILE', user_path(current_user), style: 'margin-left: 5px;' %></i></span>
             </div>
                
                
 
 		
-		<a class="panel-block">
-			<p>
-                   <span class="icon"><i class="fa fa-hashtag" aria-hidden="true"></i><P> DISCOVER </P></span>
-                </p>
-		</a>
-		<a class="panel-block">
-			<p>
-                   <span class="icon"><i class="fas fa-chart-pie"  aria-hidden="true"></i><P> STATISTICS </P></span>
-                </p>
-		</a>
 	</nav>
 
 

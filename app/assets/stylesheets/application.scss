@@ -42,6 +42,12 @@
 	margin-top: -65px;
 }
 
-p {
-	font-family: "Sanseriffic"; 
+p , title, h1, li, strong{
+	font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
 }
+
+
+.nav-links-names, .control, .column, .has-text-centered{
+	font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+}
+

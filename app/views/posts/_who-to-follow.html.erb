@@ -1,0 +1,39 @@
+ <nav class="panel">
+		<p class="panel-heading">
+			Who to Follow<span class="icon is-pulled-right"><i class="fa fa-plus" aria-hidden="false"></i></span>
+		</p>
+
+		<% @users.each do |user| %>
+        <% unless Following.exists?(current_user, user) || current_user == user %>
+          <figure class="media-left">
+			<p class="image is-64x64">
+				 <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+			</p>
+		</figure>
+          <div class="nav-links-names">
+            <%= link_to user.name, user_path(user) %>
+          </div>
+          
+             <%= form_for(current_user.active_followings.build) do |f| %>
+              <%= hidden_field_tag :followed_id, user.id %>
+              <div class="right-buttons">
+              <%= f.submit "Follow", class: "btn btn-primary" %>
+              </div>
+            <% end %>
+              
+            <% end %> 
+        <%end%>       
+      
+		
+	<div class="media-content">
+					<div class="content columns has-text-centered ">
+						<p class="column ">
+							<small >Popular account</small>
+						</p>
+						<p class="column">
+							<small>find friends</small>
+						</p>
+					
+					</div>
+				</div>
+	</nav>

@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bulma";
+
+
+@font-face {
+	font-family: "Sanseriffic";
+	src: url('/assets/Sanseriffic');
+}
+
+
+.navbar-brand .title {
+	color: white;
+}
+
+// round images
+.image {
+	border-radius: 50%;
+	img {
+		border-radius: 50%;
+	}
+}
+.notification:not(:last-child) {
+	margin-bottom: 0;
+}
+
+#who {
+	margin-top: -65px;
+}
+
+p , title, h1, li, strong{
+	font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+}
+
+
+.nav-links-names, .control, .column, .has-text-centered{
+	font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+}
+

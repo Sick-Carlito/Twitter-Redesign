@@ -5,11 +5,83 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="columns is-multiline is-gapless ">
+    <div class="column is-full">
+       <% if flash[:notice] %>
+      <div class="notification is-primary global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification is-danger global-notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    
+    </div>
+
+    <div class="column">
+      <nav class="navbar is-info ">
+      <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+        <h1 class="title is-5">Share-Opinion</h1>
+      <% end %>
+  
+     </div>
+
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+                <p>
+                   <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                </p>
+              </div>
+              <div class="navbar-item">
+                <p>
+                   <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                </p>
+              </div>
+              <div class="navbar-item">
+                <p>
+                   <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                </p>
+              </div>
+              <div class="navbar-item">
+                <p>
+                   <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                </p>
+              </div>
+          <div class="navbar-item">
+          <div class="field is-grouped">
+            
+            <% if user_signed_in? %>
+               
+              <p>
+                <%= link_to "Signout", destroy_user_session_path, method: :delete, class:"button is-info" %>
+              </p>
+              
+              
+            <% else %>
+            <p class="control">
+              <%= link_to 'Sign In', new_user_session_path, class: "button is-info" %>
+            </p>
+            <p class="control">
+              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
+            </p>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,14 @@
+
+  
+  <div class="new-initial-followers">
+    <h2 ><%= @title %></h2>
+    <br>
+    <br>
+    <% if @users.any? %>
+      <ul class="users followed">
+        <%= render @users %>
+      </ul>
+     
+    <% end %>
+  </div>
+  </section>

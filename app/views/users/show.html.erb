@@ -1,0 +1,42 @@
+<div class="columns is-multiline">
+   <aside class="has-background-dark">
+          <div class="column">
+           <%= render 'posts/profile' %>
+        </div>
+      </aside>
+         
+           
+
+
+<section class="user-section new-initial column is-7">
+<!--   <img src=" #@user.photo.thumb %>" class="avatar"> -->
+<div class="tabs">
+               <ul>
+                  <li class="is-active"><a>POSTS</a></li>
+                  <li><a>PHOTOS</a></li>
+              <li><a>VIDEOS</a></li>
+              </ul>
+         </div>
+
+  <article class="media box">
+   
+    <div class="media-content">
+      <%= render 'posts/form'%>  
+    </div>
+  </article>
+
+
+  
+  <article class="timeline">
+    <h3>All Tweets:</h3>
+    <ul class="posts">
+      <%= render @posts %>
+    </ul>
+  </article>  
+</section>
+
+        <div  class= "column">
+              <%= render 'user-profile' %>
+        </div>
+
+</div>

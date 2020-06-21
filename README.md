@@ -48,8 +48,6 @@ gem 'sqlite3', '~> 1.4'
 ```
 Visit localhost:3000/signup
 ```
-![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image1.png)
-
 
 then proceed to sign in
 
@@ -57,7 +55,6 @@ then proceed to sign in
 ```
 Visit localhost:3000/signin
 ```
-![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image2.png)
 
 ```
 You will be directed to the home page where you can create posts
@@ -90,15 +87,13 @@ You can see another users profile information
 #### Email
 carlb1319@gmail.com
 
+- [LinkedIn](https://www.linkedin.com/in/carlb420/)
+
+- [Twitter](https://twitter.com/cbond_420)
+
 
 ## Live version
 
-- [Link](https://github.com/Sick-Carlito/Twitter-Redesign)
+- [Link](https://young-fortress-46435.herokuapp.com/users/sign_in)
 
-## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-
-## Show your support
-
-Give a ⭐️ if you like this project!

@@ -11,6 +11,14 @@ Things covered in the project:
 - Adding gems for extra features
 
 
+## Build with
+
+- Ruby 2.7.0
+- Rails 6.0.2
+- sqlite3 1.4
+- yarn bundler
+- Rspec-rails
+- devise
 
 ## How to run this app
 To run it, clone this repository locally, and run these commands on your terminal.
@@ -30,14 +38,16 @@ Note: You might need to install this Gem if you are not running pg
 gem 'sqlite3', '~> 1.4'
 ```
 
+### Run tests
 
+```
+    rpsec --format documentation
+```
 
 #### To sign up
 ```
 Visit localhost:3000/signup
 ```
-![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image1.png)
-
 
 then proceed to sign in
 
@@ -45,7 +55,6 @@ then proceed to sign in
 ```
 Visit localhost:3000/signin
 ```
-![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image2.png)
 
 ```
 You will be directed to the home page where you can create posts
@@ -62,23 +71,29 @@ You can see another users profile information
 ```
 ![Alt image](https://github.com/Sick-Carlito/Twitter-Redesign/blob/readme/app/assets/images/image4.png)
 
+### Potential future features
+
+* Abbility to see trending topics
+* Abbility for users to add cover image
 
 
 
-## Build with
-
-- Ruby 2.7.0
-- Rails 6.0.2
-- sqlite3 1.4
-- yarn bundler
-- Rspec-rails
-- devise
 
 ## Author
 
 - [Carl](https://github.com/Sick-Carlito/Twitter-Redesign)
 
 
+#### Email
+carlb1319@gmail.com
+
+- [LinkedIn](https://www.linkedin.com/in/carlb420/)
+
+- [Twitter](https://twitter.com/cbond_420)
+
+
 ## Live version
 
-- [Link](https://github.com/Sick-Carlito/Twitter-Redesign)
+- [Link](https://young-fortress-46435.herokuapp.com/users/sign_in)
+
+
